@@ -6,7 +6,8 @@
     {
         private readonly IPAddress ipAddress;
 
-        public AResourceRecord(IPAddress ipAddress)
+        public AResourceRecord(DnsQuery query, uint timeToLive, IPAddress ipAddress)
+            :base(query, timeToLive)
         {
             this.ipAddress = ipAddress;
         }

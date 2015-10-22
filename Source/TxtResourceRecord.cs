@@ -7,7 +7,8 @@ namespace RadicalResearch.Net.Dns
     {
         private readonly string[] strings;
 
-        public TxtResourceRecord(string[] strings)
+        public TxtResourceRecord(DnsQuery query, uint timeToLive, string[] strings)
+            : base(query, timeToLive)
         {
             this.strings = strings;
         }

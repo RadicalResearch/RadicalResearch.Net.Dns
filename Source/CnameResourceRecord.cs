@@ -4,7 +4,8 @@ namespace RadicalResearch.Net.Dns
     {
         private readonly DnsName dnsName;
 
-        public CnameResourceRecord(DnsName dnsName)
+        public CnameResourceRecord(DnsQuery query, uint timeToLive, DnsName dnsName)
+            : base(query, timeToLive)
         {
             this.dnsName = dnsName;
         }
