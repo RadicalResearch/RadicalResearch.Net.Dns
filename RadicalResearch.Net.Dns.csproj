@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E741FA42-4E86-47A1-8E5C-BA1FAC5F139C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>RadicalResearch.Net.Dns</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>RadicalResearch.Net.Dns</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AResourceRecord.cs" />
+    <Compile Include="CnameResourceRecord.cs" />
+    <Compile Include="DnsClient.cs" />
+    <Compile Include="DnsExtensions.cs" />
+    <Compile Include="DnsListener.cs" />
+    <Compile Include="DnsMessageBase.cs" />
+    <Compile Include="DnsName.cs" />
+    <Compile Include="DnsNameWriter.cs" />
+    <Compile Include="DnsQuery.cs" />
+    <Compile Include="DnsQueryResolver.cs" />
+    <Compile Include="DnsReader.cs" />
+    <Compile Include="DnsResponse.cs" />
+    <Compile Include="DnsWriter.cs" />
+    <Compile Include="MessageFlags.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordClass.cs" />
+    <Compile Include="RecordType.cs" />
+    <Compile Include="ResourceRecordBase.cs" />
+    <Compile Include="TxtResourceRecord.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
